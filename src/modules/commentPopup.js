@@ -7,6 +7,9 @@ export default ({
   contentWrapper.classList.add('comment-container');
   const closeIcon = document.createElement('i');
   closeIcon.classList.add('cross-icon');
+  closeIcon.addEventListener('click', (e) => {
+    e.target.parentElement.parentElement.remove();
+  });
   const posterImage = document.createElement('img');
   posterImage.setAttribute('alt', 'Breaking Bad Poster');
   posterImage.setAttribute('src', imageLink);
