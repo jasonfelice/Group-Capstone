@@ -55,3 +55,41 @@ header {
 .copyright a:hover {
   text-decoration: underline;
 }
+
+.like-icon{
+  background: url('./assets/heart.svg') no-repeat center top;
+  background-size: 20px 20px;
+  display: block;
+}
+
+.like-icon span {
+  padding-top: 26px;
+  display: block;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+}
+
+.list-img {
+  width: 300px;
+  height: 400px;
+}
+
+.series-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.list-item {
+  width: 300px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
