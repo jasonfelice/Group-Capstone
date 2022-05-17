@@ -1,5 +1,7 @@
 import getData from './getData.js';
+import popup from './commentPopup.js';
 
+const button = document.querySelector('button');
 let appData = [];
 
 async function update() {
