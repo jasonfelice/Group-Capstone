@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
 </head>
+
 <body>
     <header>
         <a class="logo" href="./index.html"></a>
@@ -17,15 +21,46 @@
             </ul>
         </nav>
     </header>
-   <footer>
-       <div class="footer-text">
-           Created By Microverse under CC License
-       </div>
-       <div class="copyright">
-           &copy;2022 developed by 
-           <a href="https://github.com/jasonfelice" class="hre"> @jasonfelice</a> &
-           <a href="https://github.com/bamsi" class="hre"> @bamsi</a>
-       </div>
-   </footer> 
+    <main>
+        <button type="button" id="753">Test Button</button>
+        <div class="comment-wrapper">
+            <div class="comment-container">
+                <i class="cross-icon"></i>
+                <div class="image"></div>
+                <h2>Season</h2>
+                <div class="item-info">
+                    <div>INFO</div>
+                    <div>INFO</div>
+                </div>
+                <div class="item-info">
+                    <div>INFO</div>
+                    <div>INFO</div>
+                </div>
+                <div class="comments">
+                    <h3>Comments</h3>
+                    <div class="recent-comments"></div>
+                </div>
+                <div class="add-comment">
+                    <h3>Add a comment</h3>
+                    <form action="#" class="comment-form">
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <textarea name="Comment" id="comment" cols="30" rows="10" placeholder="Your comment"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-text">
+            Created By Microverse under CC License
+        </div>
+        <div class="copyright">
+            &copy;2022 developed by
+            <a href="https://github.com/jasonfelice" class="hre"> @jasonfelice</a> &
+            <a href="https://github.com/bamsi" class="hre"> @bamsi</a>
+        </div>
+    </footer>
 </body>
+
 </html>
