@@ -1,1 +1,0 @@
-export default async () => (await fetch('https://api.tvmaze.com/shows/169/seasons')).json();

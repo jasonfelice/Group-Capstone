@@ -1,15 +1,10 @@
-import getData from './getData.js';
 import popup from './commentPopup.js';
 
 const button = document.querySelector('button');
+const getData = async () => (await fetch('https://api.tvmaze.com/shows/169/seasons')).json();
 
 button.addEventListener('click', async (e) => {
-  let appData = [];
-  try {
-    appData = await getData();
-  } catch (e) {
-    return `Error ${e}`;
-  }
+  const appData = await getData().then((response) => response);
   const data = appData.filter((item) => item.id === +(e.target.id));
   popup({
     info1: data[0].premiereDate,
@@ -19,5 +14,4 @@ button.addEventListener('click', async (e) => {
     imageLink: data[0].image.original,
     number: data[0].number,
   });
-  return 'Loaded';
 });

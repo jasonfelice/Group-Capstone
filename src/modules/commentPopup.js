@@ -1,9 +1,11 @@
 import addComment from './addComment.js';
 import postComment from './postComment.js';
+import loadComments from './loadComments.js';
 
-export default ({
+export default async ({
   info1, info2, info3, info4, imageLink, number,
 }) => {
+  const commentsData = await loadComments(number);
   const mainWrapper = document.createElement('div');
   mainWrapper.classList.add('comment-wrapper');
   const contentWrapper = document.createElement('div');
@@ -75,4 +77,10 @@ export default ({
   contentWrapper.appendChild(addCommentSection);
   mainWrapper.appendChild(contentWrapper);
   document.querySelector('main').appendChild(mainWrapper);
+  commentsData.forEach((each) => {
+    addComment({
+      name: each.username,
+      comment: each.comment,
+    });
+  });
 };
