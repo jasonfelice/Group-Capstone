@@ -100,6 +100,21 @@ header {
   width: 30%;
 }
 
+.comments {
+  width: 40%;
+  text-align: center;
+}
+
+.comment-box {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.comment-box:nth-child(odd) {
+  background-color: #eee;
+}
+
 .add-comment {
   display: flex;
   flex-direction: column;
