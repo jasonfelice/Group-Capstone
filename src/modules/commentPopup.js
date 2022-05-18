@@ -1,4 +1,4 @@
-import postComment from './addComment.js';
+import addComment from './addComment.js';
 
 export default ({
   info1, info2, info3, info4, imageLink, number,
@@ -32,11 +32,11 @@ export default ({
   recentComments.classList.add('recent-comments');
   comments.appendChild(cSubTitle);
   comments.appendChild(recentComments);
-  const addComment = document.createElement('div');
-  addComment.classList.add('add-comment');
+  const addCommentSection = document.createElement('div');
+  addCommentSection.classList.add('add-comment');
   const aSubTitle = document.createElement('h3');
   aSubTitle.textContent = 'Add a comment';
-  addComment.appendChild(aSubTitle);
+  addCommentSection.appendChild(aSubTitle);
   const form = document.createElement('form');
   form.classList.add('comment-form');
   const nameInput = document.createElement('input');
@@ -49,7 +49,7 @@ export default ({
   button.setAttribute('type', 'submit');
   button.addEventListener('click', (e) => {
     e.preventDefault();
-    postComment({
+    addComment({
       name: nameInput.value,
       comment: commentInput.value,
     });
