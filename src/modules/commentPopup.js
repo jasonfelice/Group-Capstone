@@ -1,4 +1,5 @@
 import addComment from './addComment.js';
+import postComment from './postComment.js';
 
 export default ({
   info1, info2, info3, info4, imageLink, number,
@@ -49,22 +50,29 @@ export default ({
   button.setAttribute('type', 'submit');
   button.addEventListener('click', (e) => {
     e.preventDefault();
-    addComment({
-      name: nameInput.value,
-      comment: commentInput.value,
-    });
+    if (nameInput.value && commentInput.value) {
+      addComment({
+        name: nameInput.value,
+        comment: commentInput.value,
+      });
+      postComment({
+        id: number,
+        username: nameInput.value,
+        comment: commentInput.value,
+      });
+    }
   });
   form.appendChild(nameInput);
   form.appendChild(commentInput);
   form.appendChild(button);
-  addComment.appendChild(form);
+  addCommentSection.appendChild(form);
   contentWrapper.appendChild(closeIcon);
   contentWrapper.appendChild(posterImage);
   contentWrapper.appendChild(title);
   contentWrapper.appendChild(itemInfo1);
   contentWrapper.appendChild(itemInfo2);
   contentWrapper.appendChild(comments);
-  contentWrapper.appendChild(addComment);
+  contentWrapper.appendChild(addCommentSection);
   mainWrapper.appendChild(contentWrapper);
   document.querySelector('main').appendChild(mainWrapper);
 };
