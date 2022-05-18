@@ -1,3 +1,5 @@
+import postComment from './addComment.js';
+
 export default ({
   info1, info2, info3, info4, imageLink, number,
 }) => {
@@ -45,6 +47,13 @@ export default ({
   const button = document.createElement('button');
   button.textContent = 'Submit';
   button.setAttribute('type', 'submit');
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    postComment({
+      name: nameInput.value,
+      comment: commentInput.value,
+    });
+  });
   form.appendChild(nameInput);
   form.appendChild(commentInput);
   form.appendChild(button);
