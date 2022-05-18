@@ -56,15 +56,54 @@ header {
   text-decoration: underline;
 }
 
+.like-icon {
+  background: url('./assets/heart.svg') no-repeat center top;
+  background-size: 20px 20px;
+  display: block;
+}
+
+.like-icon span {
+  padding-top: 26px;
+  display: block;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+}
+
+.list-img {
+  width: 300px;
+  height: 400px;
+}
+
+.series-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.list-item {
+  width: 300px;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Comments Wrapper */
 
 .comment-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
   display: flex;
   backdrop-filter: blur(10px);
+  background-color: rgba(238, 238, 238, 0.575);
 }
 
 .comment-container {
