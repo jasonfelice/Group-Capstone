@@ -7,9 +7,9 @@ async function displayData() {
     let itemList = '';
     response.forEach((element) => {
       itemList += `<li class="list-item">
-                          <img class="list-img" src="${element?.image?.original}" alt="Episode ${element.episodeOrder}">
+                          <img class="list-img" src="${element?.image?.original}" alt="Season ${element.number}">
                             <div class="series-title">
-                                <p>Episode ${element.episodeOrder}</p>
+                                <p>Season ${element.number}</p>
                                 <a href="#" class="like-icon" id="item${element.id}"> <span>0 likes</span>  </a>
                             </div>
                             <div class="buttons">
