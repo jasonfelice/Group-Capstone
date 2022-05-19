@@ -1,12 +1,12 @@
-import { Movies } from "./resource";
+import { Movies } from './resource.js';
 
-async function displayData(){
-   const list = document.querySelector('.list');
-   const obj = new Movies();
-   await obj.getData().then((response)=>{
-       let itemList = '';
-       response.forEach(element => {
-           itemList += `<li class="list-item">
+async function displayData() {
+  const list = document.querySelector('.list');
+  const obj = new Movies();
+  await obj.getData().then((response) => {
+    let itemList = '';
+    response.forEach((element) => {
+      itemList += `<li class="list-item">
                           <img class="list-img" src="${element?.image?.original}" alt="Episode ${element.episodeOrder}">
                             <div class="series-title">
                                 <p>Episode ${element.episodeOrder}</p>
@@ -17,9 +17,9 @@ async function displayData(){
                                 <button type="button" >Reservation</button>
                             </div>
                         </li>`;
-       });
-       list.innerHTML = itemList;
-   });
+    });
+    list.innerHTML = itemList;
+  });
 }
 
 export default displayData;
