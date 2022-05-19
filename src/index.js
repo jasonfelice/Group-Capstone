@@ -1,5 +1,4 @@
 import './style.css';
-import './modules/app.js';
 import displayData from './modules/loadData.js';
 import addLike from './modules/addLike.js';
 import displayLikes from './modules/viewLikes.js';
