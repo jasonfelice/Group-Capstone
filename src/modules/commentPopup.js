@@ -53,10 +53,6 @@ export default async ({
   button.addEventListener('click', (e) => {
     e.preventDefault();
     if (nameInput.value && commentInput.value) {
-      addComment({
-        name: nameInput.value,
-        comment: commentInput.value,
-      });
       postComment({
         id: number,
         username: nameInput.value,

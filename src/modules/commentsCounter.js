@@ -1,0 +1,1 @@
+export default () => document.querySelectorAll('.comment-box').length;
