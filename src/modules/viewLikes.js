@@ -1,4 +1,5 @@
 import { Movies } from './resource.js';
+import likeCounter from './likeCounter.js';
 
 function displayLikes() {
   const obj = new Movies();
@@ -6,8 +7,9 @@ function displayLikes() {
     if (response) {
       response.forEach((element) => {
         const like = document.getElementById(element.item_id);
+        const count = likeCounter(element.item_id, response);
         if (like) {
-          const textNode = `<span>${element.likes} likes </span>`;
+          const textNode = `<span>${count} likes </span>`;
           like.innerHTML = textNode;
         }
       });

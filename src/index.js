@@ -9,8 +9,9 @@ window.onload = displayData().then(() => {
   const likeIcon = document.querySelectorAll('.like-icon');
   likeIcon.forEach((e) => {
     const item = e.getAttribute('id');
-    e.addEventListener('click', () => {
+    e.addEventListener('click', (event) => {
       addLike(item);
+      event.preventDefault();
     });
   });
 });
