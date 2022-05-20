@@ -68,9 +68,13 @@ header {
 }
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  list-style-type: none;
+  list-style: none;
+  display: flex;
+  gap: 20vh 10vw;
+  flex-flow: row wrap;
+  width: 80%;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .list-img {
@@ -82,11 +86,6 @@ header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 4px;
-}
-
-.list-item {
-  width: 300px;
-  margin-bottom: 2rem;
 }
 
 .buttons {
