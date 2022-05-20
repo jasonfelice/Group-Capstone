@@ -15,6 +15,7 @@
   --secondary: #e4324c;
   --button-hover: #c42b42;
   --button-active: #a12437;
+  --hoverLight: #d35467;
 }
 
 body {
@@ -52,6 +53,12 @@ header {
 .like-icon span {
   padding-top: 26px;
   display: block;
+  color: #000;
+  transition: all 0.2s ease-out;
+}
+
+.like-icon span:hover {
+  color: var(--button-hover);
 }
 
 .logo span:nth-child(1) {
@@ -71,8 +78,18 @@ header {
 .nav-links a {
   padding: 1rem;
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-size: 1.5rem;
+  transition: all 0.2s ease-out;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: rgb(0, 0, 0, 0.5);
+}
+
+.nav-links a:hover {
+  color: var(--button-hover);
 }
 
 .footer-text,
@@ -91,19 +108,20 @@ header {
   background-color: #c1c1c1;
 }
 
-.copyright a {
-  text-decoration: none;
-  color: rgb(0, 0, 0, 0.5);
-}
-
 .copyright a:hover {
   text-decoration: underline;
 }
 
 .like-icon {
+  text-decoration: none;
   background: url('./assets/heart.svg') no-repeat center top;
   background-size: 20px 20px;
   display: block;
+  filter: invert(1);
+}
+
+.like-icon:hover {
+  filter: none;
 }
 
 .list {
@@ -124,17 +142,31 @@ header {
 
 .list-item {
   border: 5px inset var(--secondary);
+  transition: all 0.2s ease-out;
+  box-shadow: 0 0 10px black;
+}
+
+.list-item:hover {
+  border: 5px inset var(--hoverLight);
+  transform: scale(1.02);
+  box-shadow: 0 0 20px black;
 }
 
 .series-title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 4px;
+  align-items: center;
+  padding: 3px;
+}
+
+.series-title p {
+  font-size: 1.3rem;
 }
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 3px;
   padding: 3px;
 }
 
