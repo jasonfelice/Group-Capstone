@@ -1,6 +1,6 @@
 import { Movies } from './resource.js';
 
-async function displayData() {
+const displayData = async () => {
   const list = document.querySelector('.list');
   const obj = new Movies();
   await obj.getData().then((response) => {
@@ -20,6 +20,6 @@ async function displayData() {
     });
     list.innerHTML = itemList;
   });
-}
+};
 
 export default displayData;
