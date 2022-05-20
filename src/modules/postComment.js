@@ -1,8 +1,8 @@
 import addComment from './addComment.js';
 
-export default ({ id, username, comment }) => {
+export default async ({ id, username, comment }) => {
   const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mU67F6D8b0eq3yf1Ab3T/comments';
-  fetch(url, {
+  await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
