@@ -1,7 +1,7 @@
 import { Movies } from './resource.js';
 import displayLikes from './viewLikes.js';
 
-function addLike(item) {
+const addLike = (item) => {
   const obj = new Movies();
   const payload = { item_id: item };
   obj.addLike(payload).then((response) => {

@@ -1,7 +1,7 @@
 import { Movies } from './resource.js';
 import likeCounter from './likeCounter.js';
 
-function displayLikes() {
+const displayLikes = ()=> {
   const obj = new Movies();
   obj.getLike().then((response) => {
     if (response) {
