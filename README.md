@@ -1,4 +1,5 @@
 # Project - JavaScript Group Capstone
+This is the JavaScript capstone project. We've used [This API](https://api.tvmaze.com/shows/169/seasons) to get the list of Breaking Bad seasons. This is the involvement [API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270) we've used store likes and comments.
 
 ## Built With
 
@@ -6,6 +7,7 @@
 - CSS
 - JavaScript
 - webpack
+- jest for testing
 
 ## Live Demo
 [Live Demo Link](https://github.com/jasonfelice/Group-Capstone)
@@ -46,6 +48,7 @@ Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](../../issues/).
 
 ## Acknowledgments
+Favicon by [Icons8](https://icons8.com/icon/57214/tv-show)
 
 ## 📝 License
 
