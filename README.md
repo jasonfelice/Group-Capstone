@@ -20,6 +20,7 @@ Download all dependencies after cloning this repository. Run:
 ```
 npm install
 ```
+Run `npm run dev` to open in live server.
 
 To get a local copy up and running follow these simple example steps.
 - Copy this [link](https://github.com/jasonfelice/Group-Capstone)
@@ -51,7 +52,3 @@ Feel free to check the [issues page](../../issues/).
 
 ## Acknowledgments
 Favicon by [Icons8](https://icons8.com/icon/57214/tv-show)
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
