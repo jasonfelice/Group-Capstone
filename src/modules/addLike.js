@@ -9,6 +9,6 @@ const addLike = (item) => {
       displayLikes();
     }
   });
-}
+};
 
 export default addLike;

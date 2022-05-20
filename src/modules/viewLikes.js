@@ -1,7 +1,7 @@
 import { Movies } from './resource.js';
 import likeCounter from './likeCounter.js';
 
-const displayLikes = ()=> {
+const displayLikes = () => {
   const obj = new Movies();
   obj.getLike().then((response) => {
     if (response) {
@@ -15,6 +15,6 @@ const displayLikes = ()=> {
       });
     }
   });
-}
+};
 
 export default displayLikes;
