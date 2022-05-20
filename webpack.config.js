@@ -34,6 +34,7 @@ module.exports = {
       title: 'JavaScript Group Capstone',
       filename: 'index.html',
       template: 'src/index.html',
+      favicon: './src/assets/favicon.ico',
     }),
   ],
 };
