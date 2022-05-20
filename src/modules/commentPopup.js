@@ -23,7 +23,7 @@ export default async ({
   title.textContent = `Season ${number}`;
   const itemInfo1 = document.createElement('div');
   itemInfo1.classList.add('item-info');
-  itemInfo1.innerHTML = `<span>${info1}</span><span>${info2}</span>`;
+  itemInfo1.innerHTML = `<span>Air Date: ${info1}</span><span>${info2}</span>`;
   const itemInfo2 = document.createElement('div');
   itemInfo2.classList.add('item-info');
   itemInfo2.innerHTML = `<span>${info3}</span><span>${info4}</span>`;
