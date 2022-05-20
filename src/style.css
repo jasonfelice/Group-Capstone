@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 * {
   margin: 0;
@@ -9,6 +10,18 @@
   font-family: 'Bebas Neue', cursive;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
 :root {
   --background: #232122;
   --secondaryBackground: #333132;
@@ -16,6 +29,10 @@
   --button-hover: #c42b42;
   --button-active: #a12437;
   --hoverLight: #e6909d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--button-hover);
 }
 
 body {
@@ -179,30 +196,35 @@ header {
   height: 100%;
   display: flex;
   backdrop-filter: blur(10px);
-  background-color: rgba(238, 238, 238, 0.575);
+  background-color: var(--background);
+  opacity: 0.97;
 }
 
 .comment-container {
+  margin: auto;
   padding: 1rem;
   position: relative;
-  border: 2px solid black;
+  border: 5px inset var(--secondary);
+  border-radius: 7px;
   width: 60%;
-  margin: auto;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  box-shadow: 0 0 20px #000;
 }
 
 .cross-icon {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 5px;
+  right: 5px;
   background: url(./assets/cross-icon.png) no-repeat center center;
   width: 30px;
   background-size: 30px;
   height: 30px;
   cursor: pointer;
+  filter: invert(1);
 }
 
 .image {
@@ -213,6 +235,7 @@ header {
   display: flex;
   justify-content: space-between;
   width: 30%;
+  background-color: var(--button-active);
 }
 
 .comments {
@@ -223,11 +246,16 @@ header {
 .comment-box {
   display: flex;
   justify-content: space-around;
-  padding: 1rem;
+  padding: 1.2rem;
+  background-color: var(--background);
+}
+
+.comment-box span:nth-child(2) {
+  font-family: 'Handlee', cursive;
 }
 
 .comment-box:nth-child(odd) {
-  background-color: #eee;
+  background-color: var(--secondaryBackground);
 }
 
 .add-comment {
@@ -235,10 +263,20 @@ header {
   flex-direction: column;
   gap: 1rem;
   text-align: center;
+  width: 40%;
 }
 
 .add-comment form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.comment-form input,
+textarea {
+  resize: none;
+  padding: 3px 5px;
+  outline: none;
+  text-align: center;
+  color: #000;
 }
